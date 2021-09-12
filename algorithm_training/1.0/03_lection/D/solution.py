@@ -1,6 +1,7 @@
-fh = open("input.txt")
-lst = list()
-for line in fh:
-    line = line.rstrip("\n")
-lst += line.lower().split()
-print(len(set(lst)))
+import sys
+
+word_set = set()
+for line in sys.stdin:
+    for word in line.split():
+        word_set.add(word)
+print(len(word_set))
